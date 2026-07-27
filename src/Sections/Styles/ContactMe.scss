@@ -1,0 +1,398 @@
+.ContacMe{  
+    height: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px #373c44 solid;
+
+
+    .container_Title_image{ 
+        position: relative;
+        width: 512px;
+        height: 100%;
+
+
+        h2{ 
+            position: absolute;
+            top: 258px;
+            left: 96px;
+
+            width: 600px;
+            font-size: 64px;
+            font-weight: bold;
+            font-family: "Poppins", sans-serif;
+            line-height: 80px;
+
+            z-index: 2;
+
+            span{   
+                font-family: "Poppins", sans-serif;
+                color: #00adb5;
+            }
+        }
+
+        .mainImage{ 
+            position: absolute;
+            top: 408px;
+            left: 118px;
+
+            width: 454.37px;
+            height: 365px;
+            z-index: 2;
+        }
+    }
+
+    .container_Form_images{ 
+        position: relative;
+        width: 928px;
+        height: 100%;
+        border-left: 2px #373c44 solid;
+
+        .Keyboard{  
+            width: 139.2px;
+
+            position: absolute;
+            top:60px;
+            right: 467px;
+        }
+
+        .formImputsContainer{   
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            width: 600px;
+            height: 508px;
+
+            position: absolute;
+            top: 258px;
+            right: 96px;
+
+            .container_Name_Email{  
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+
+                .container_Name{    
+                    width: 288px;
+                    height: 96px;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .Error{ 
+                        color: #00adb5;
+                    }
+
+                    p{  
+                        font-family: "Poppins", sans-serif;
+                        font-size: 18px;
+                        font-weight:bold;
+                    }
+
+                    input{  
+                        padding: 16px 24px;
+                        background-color: #373c44;
+                        border-radius: 16px;
+                        font-family: "Poppins", sans-serif;
+                        height: 59px;
+                        outline-style: none;
+                        border: none;
+                        color: azure;
+                    }
+
+                    input::placeholder {
+                        font-weight: bold;
+                    }
+                }
+                .container_Email{   
+                    width: 288px;
+                    height: 96px;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .Error{ 
+                        color: #00adb5;
+                    }
+
+                    p{  
+                        font-family: "Poppins", sans-serif;
+                        font-size: 18px;
+                        font-weight:bold;
+                    }
+
+                    input{  
+                        padding: 16px 24px;
+                        background-color: #373c44;
+                        border-radius: 16px;
+                        font-family: "Poppins", sans-serif;
+                        height: 59px;
+                        outline-style: none;
+                        border: none;
+                        color: azure;
+                    }
+                    
+                    input::placeholder {
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+
+            .container_Message{ 
+                width: 100%;
+                height: 317px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .Error{ 
+                    color: #00adb5;
+                }
+
+                p{  
+                    font-family: "Poppins", sans-serif;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                textarea{ 
+                    height: 280px;
+                    padding: 16px 24px;
+                    background-color: #373c44;
+                    border-radius: 16px;
+                    font-family: "Poppins", sans-serif;
+                    outline-style: none;
+                    border: none;
+                    color: azure;
+                    resize: none;
+                }
+                
+                textarea::placeholder {
+                    font-weight: bold;
+                }
+            }
+
+            .container_Submmit{ 
+                position: relative;
+                width: 232px;
+                height: 47px;
+
+                svg{
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    right: 32px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: azure;
+                    pointer-events: none; // Para que no interfiera al hacer clic
+                    font-size: 20px;
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px 32px; // Espacio para el icono
+                    font-size: 18px;
+                    border-radius: 24px;
+                    border-style: none;
+                    font-weight: bold;
+                    font-family: "Poppins", sans-serif;
+
+                    text-align: start;
+
+                    background-color: #00adb5;
+                    color: azure;
+                    cursor: pointer;
+
+                    
+                }
+            }
+        }
+
+        .mail{  
+            width: 58.23px;
+
+            position: absolute;
+            bottom:169.33px;
+            right: 165px;
+        }
+    }
+
+    @media (max-width: 1439px) {
+        .container_Title_image{  
+            width: 40%;
+        }
+        .container_Form_images{  
+            width: 60%;
+        }
+    }  
+
+    @media (max-width:1310px){
+
+        .container_Title_image{ 
+            h2{ 
+                width: 432px;
+            }
+
+            .mainImage{ 
+                top: 519px;
+                left: 134px;
+                width: 354.37px;
+                height: 265px;
+            }
+        }
+        .container_Form_images{ 
+            .formImputsContainer{   
+                width: 507px;
+            }
+        }
+    }
+
+    @media (max-width:1147px) {
+        .container_Title_image{ 
+            h2{ 
+                width: max-content;
+                top: 70px;
+                left: 50%;
+                right: 50%;
+                font-size: 56px;
+            }
+
+            .mainImage{ 
+                top: 488px;
+                left: 25px;
+            }
+        }
+        .container_Form_images{ 
+            .Keyboard{  
+                top: 224px;
+                right: 742px;
+            }
+            .formImputsContainer{   
+                right: 80px;
+            }
+        }
+    }
+
+    @media (max-width:1089px) {
+        .container_Title_image{ 
+            h2{ 
+                width: 514px;
+            }
+
+            .mainImage{ 
+                top: 353px;
+                left: 13px;
+            }
+        }
+        .container_Form_images{ 
+            .Keyboard{  
+                top: 70px;
+                right: 100px;
+            }
+        }
+    }
+
+    @media (max-width:1023px) {
+        .container_Title_image{ 
+            .mainImage{ 
+                display: none;
+            }
+        }
+
+        .container_Form_images{ 
+            .formImputsContainer{   
+                left: -146px;
+            }
+        }
+    }
+
+    @media (max-width:837px) {
+        .container_Title_image{ 
+            h2{ 
+                width: 314px;;
+                line-height: 50px;
+            }
+        }
+    }
+
+    @media (max-width:675px) {
+        .container_Form_images{ 
+            .Keyboard{  
+                top: 119px;
+                right: 39px;
+            }
+        }
+    }
+    
+
+    @media (max-width: 643px) { 
+        .container_Title_image{  
+            width: 30%;
+        }
+        .container_Form_images{  
+            width: 70%;
+            
+            .formImputsContainer{   
+                width: 330px;
+                left: -35px;
+                .container_Name_Email{  
+                    flex-direction: column;
+
+                    .container_Name{    
+                        width: 100%;
+                    }
+                    .container_Email{   
+                        width: 100%;
+                    }
+                }
+            }
+
+            .mail{  
+                bottom: 78.33px;
+                right: 62px;
+            }
+        }
+    }
+
+    @media (max-width:497px){   
+        .container_Form_images{ 
+            .Keyboard{  
+                top: 182px;
+                right: 0px;
+            }
+            .mail{  
+                bottom: 31.33px;
+            }
+        }
+    }
+
+    @media (max-width:440px) {
+        .container_Form_images{  
+            .formImputsContainer{   
+                width: 252px;
+                right: 0px;
+                left: 0px;
+            }
+        }   
+                
+    }
+
+    @media (max-width:375px) {
+        .container_Form_images{  
+            .formImputsContainer{   
+                right: 57px;
+                left: unset;
+            }
+        }   
+                
+    }
+    
+}

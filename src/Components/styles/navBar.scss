@@ -1,0 +1,116 @@
+.navBar_Component{
+    width: 100%;
+    height: 132px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title{ 
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+        width: 512px;
+        height: 100%;
+        font-size: 24px;
+        padding: 0px 96px;
+        box-sizing: border-box;
+        background-color: #222831;
+        border-bottom: 2px #373c44 solid;
+        cursor: pointer;
+    }
+    
+    .container_Selectors{  
+        padding: 0px 96px 0px 0px;
+        box-sizing: border-box;
+
+        width: 928px;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;    
+        gap: 48px;
+        border-left: 2px #373c44 solid;
+        border-bottom: 2px #373c44 solid;
+
+        background-color: #222831;
+
+
+
+        p{  
+            cursor: pointer;
+            font-size: 18px;
+            font-family: "Poppins", sans-serif;
+        }
+    }
+
+    
+    @media (max-width:  1439px) {
+        .title{ 
+            width: 40%;
+        }
+
+        .container_Selectors{   
+            width: 60%;
+        }
+    }
+
+    @media (max-width: 912px) {
+        .title{ 
+            font-size: 18px;
+        }
+        .container_Selectors{   
+            p{  
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: 824px) {
+        .title{ 
+           padding: 0px 40px;
+        }
+        .container_Selectors{   
+            padding: 0px 40px;
+        }
+    }
+
+    @media (max-width: 643px) {
+        .title{ 
+           width: 30%;
+        }
+        .container_Selectors{   
+            width: 70%;
+            p{  
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 580px) {
+        .container_Selectors{   
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 470px) {
+        .title{ 
+           padding: 0px 20px;
+        }
+        .container_Selectors{   
+            padding: 0px 20px;
+        }
+    }
+
+    @media (max-width: 390px) {   
+        .title{ 
+            font-size: 14px;
+        }
+        .container_Selectors{   
+            padding: 0px 20px;
+            gap: 10px;
+        }
+    }
+
+    
+}

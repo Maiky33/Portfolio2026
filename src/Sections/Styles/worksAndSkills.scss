@@ -1,0 +1,190 @@
+.container_works_Skills{  
+    height: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .works_Skills{  
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        width: 1200px;
+        height: auto;
+
+        .title_filters{ 
+            display: flex;
+            flex-direction: column;
+
+            h2{ 
+                width: auto;
+                height: 96px;
+                font-size: 64px;
+                font-weight: bold;
+                font-family: "Poppins", sans-serif;
+
+                span{   
+                    font-family: "Poppins", sans-serif;
+                    color: #00adb5;
+                }
+            }
+
+            .container_Buttons{ 
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap:16px;
+
+                button{ 
+                    
+                    height: 47px;
+                    
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: "Poppins", sans-serif;
+                    
+                    border-radius: 22px;
+                    border-style: none;
+                    padding: 10px 32px;
+                    
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+                    background: rgba(57, 62, 70, 0.4);
+                    backdrop-filter: blur(2px);
+                    -webkit-backdrop-filter: blur(10px); /* Safari */
+                    
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+                
+                button:hover{
+                    background: #00adb5;
+                }
+
+                .active{    
+                    background: #00adb5;
+                }
+            }
+        } 
+
+        .minCards,
+        .cards{ 
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            align-items: center;
+            
+            overflow-x: scroll;
+            padding-bottom: 50px;
+
+            gap: 48px;
+
+            /* Ancho del scroll */
+            &::-webkit-scrollbar {
+                height: 10px;
+            }
+
+            /* Fondo del scroll */
+            &::-webkit-scrollbar-track {
+                background: #222831;
+            }
+
+            /* Barra que se mueve */
+            &::-webkit-scrollbar-thumb {
+                background: #00ADB5;
+                border-radius: 10px;
+            }
+
+            /* Hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #00c8d4;
+            }
+        }
+
+        .minCards{  
+            grid-template-rows: repeat(1, 1fr);
+            overflow:hidden;
+        }
+
+        
+        @media (max-width: 1286px) {
+            .title_filters{ 
+                width: 786px;
+            }
+
+            .minCards,
+            .cards{ 
+                width: 786px;
+                grid-template-columns: repeat(4, 1fr);
+                overflow-x: scroll;
+            }    
+            
+            .minCards{  
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    
+        @media (max-width: 830px) {
+            .title_filters{ 
+                width: 368px;
+
+                h2{ 
+                    font-size: 40px;
+                    height: 74px;
+                }
+                .container_Buttons{ 
+                    button{ 
+                        font-size: 15px;
+                        padding: 8px 15px;
+                    }
+                }
+            }
+            .minCards,
+            .cards{  
+                width: 368px;
+            }
+        }
+
+        @media (max-width: 442px) { 
+
+            .title_filters{ 
+                .container_Buttons{ 
+                    gap: 8px;
+                    button{ 
+                        font-size: 14px;
+                        padding: 8px 12px;
+                    }
+                }
+            }
+
+            .minCards,
+            .cards{  
+                width: 310px;
+                .cardSkill{ 
+                    width: 310px;
+                    .container_Image_Buttons{   
+                        img{    
+                            width: 255px;
+                            height: 170px;
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 390px) {
+            .title_filters{ 
+                width: 330px;
+                h2{ 
+                    font-size: 35px;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 1286px) {
+        .works_Skills{  
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

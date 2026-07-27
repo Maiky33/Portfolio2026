@@ -1,0 +1,282 @@
+.home{  
+    width: 100%;
+    height: 892px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    .container_Image_Title_Buttons{ 
+        position: relative;   
+        height: 100%;
+        width: 512px;  
+        background-color: #222831;
+        box-sizing: border-box;
+
+        img{    
+            width: 89.96px;
+            height: 221.69px;
+            position: absolute;
+            top: 258.3px;
+            left: 72px;
+        }
+
+        .containter_Title_Buttons{   
+            position: absolute;
+            top: 202px;
+            left: 180px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+
+            z-index: 2;
+
+            h2{ 
+                height: 192px;
+                font-size: 96px;
+                font-weight: bold;
+                line-height: 96px;
+                font-family: "Poppins", sans-serif;
+
+                span{   
+                    font-family: "Poppins", sans-serif;
+                    color: #00adb5;
+                }
+            }
+
+            .container_Buttons{ 
+                display: flex;
+                justify-content: start;
+                gap: 24px;
+
+                button{ 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    font-family: "Poppins", sans-serif;
+                    font-size: 18px;
+                    font-weight: bold;
+                    height: 47px;
+                    border-radius: 22px;
+                    border-style: none;
+                    cursor: pointer;
+
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+
+                    svg{    
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                .hire_Me{   
+                    width: 136px;
+                    background-color: #00adb5;
+                    color: #fff;
+                }
+                .download_CV{   
+                    width: 223px;
+                    background-color: #333841;
+                    color: #fff;
+                }
+            }
+
+        }
+
+    }
+
+    .container_Image_Row{   
+        position: relative;
+
+        width: 928px;
+        height: 100%;
+        border-left: 2px #373c44 solid;
+        background-color: #222831;
+        box-sizing: border-box;
+
+
+        img{    
+            position: absolute;
+            bottom: 73.35px;
+            right: 79px;
+
+            width: 547px;
+            height: 651px;
+        }
+
+        @media (max-width: 1439px) {
+        }
+
+        button{ 
+            position: absolute;
+            bottom: 64px;
+            left: -49px;
+
+            width: 96px;
+            height: 96px;
+
+            background-color: #333841;
+            color: #fff;
+            border: 0px;
+
+            cursor: pointer;
+
+            svg{    
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+
+
+    @media (max-width: 1439px) {
+        .container_Image_Title_Buttons{ 
+            width: 40%;
+        }
+        .container_Image_Row{   
+            width: 60%;
+            
+            img{    
+                right: 0px;
+            }
+        
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .container_Image_Title_Buttons{ 
+
+            img{    
+                top: 170.3px;
+            }
+
+            .containter_Title_Buttons{  
+                top: 114px;
+                left: 159px;
+            }
+        }
+
+        .container_Image_Row{   
+            img{    
+                bottom: 92.35px;
+                width: 447px;
+                height: 551px;
+            }
+        }
+    }
+    
+
+    @media (max-width: 912px) {
+        .container_Image_Title_Buttons{ 
+
+            img{    
+                top: 104.3px;
+            }
+            
+            .containter_Title_Buttons{  
+                top: 46px;
+                left: 163px;
+            }
+        }
+
+        .container_Image_Row{   
+            img{    
+                bottom: 211.35px;
+                width: 347px;
+                height: 451px;
+                right: 0px;
+            }
+        }
+    }
+
+    @media (max-width: 824px) {
+        .container_Image_Title_Buttons{ 
+
+            img{    
+                width: 63.96px;
+                height: 152.69px;
+                
+                top: 75.3px;
+                left: 90px;
+            }
+
+            .containter_Title_Buttons{  
+                
+                h2{ 
+                    height: 87px;
+                    font-size: 65px;
+                    line-height: 60px;
+                }
+            }
+           
+        }
+    }
+
+    @media (max-width: 643px) {
+        .container_Image_Title_Buttons{ 
+            width: 30%;
+
+            img{    
+                left: 26px;
+            }
+
+            .containter_Title_Buttons{  
+                left: 96px;
+            }
+        }
+        .container_Image_Row{   
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 580px) {
+        .container_Image_Title_Buttons{ 
+
+            img{    
+                width: 47.96px;
+                height: 102.69px;
+                top: 66.3px;
+                left: 43px;
+            }
+
+            .containter_Title_Buttons{  
+                .container_Buttons{ 
+                    button{ 
+                        font-size: 14px;
+                    }
+                    .hire_Me{   
+                        width: 100px;
+                    }
+                    .download_CV{   
+                        width: 184px;
+                    }
+                }
+                h2{ 
+                    height: 47px;
+                    font-size: 43px;
+                    line-height: 40px;
+                }
+            }
+           
+        }
+    }
+
+    @media (max-width: 408px) {
+        .container_Image_Title_Buttons{ 
+            .containter_Title_Buttons{  
+                .container_Buttons{ 
+                    gap: 14px;
+                    .hire_Me{   
+                        width: 82px;
+                    }
+                    .download_CV{   
+                        width: 162px;
+                    }
+                }
+            }
+           
+        }
+    }
+}

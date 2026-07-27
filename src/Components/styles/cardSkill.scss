@@ -1,0 +1,89 @@
+.cardSkill{ 
+    width: 368px;
+    height: 280px;
+    border-radius: 16px;
+
+    background: rgba(57, 62, 70, 0.4);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+
+    .container_Image_Buttons{   
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        img{    
+            width: 316px;
+            height: 194px;
+            border-radius: 8px;
+            cursor: pointer;
+
+        }
+
+        .technologies{  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 316px;
+            height: 194px;
+            border-radius: 8px;
+            cursor: pointer;
+    
+            background: rgba(0, 173, 181, 0.1);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(10px); /* Safari */
+
+            .container_Icons{   
+                width: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                flex-wrap: wrap;
+                gap: 15px;
+
+                .Icons{ 
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+        }
+
+        .container_Buttons{ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+
+            a{  
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Poppins", sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                height: 47px;
+                border-radius: 22px;
+                border-style: none;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+
+                color: #fff;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            .webSite{  
+                background-color: #00adb5;
+            }
+
+            .repository{    
+                background-color: #333841;
+            }
+        }
+
+    }
+}

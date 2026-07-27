@@ -1,0 +1,214 @@
+.fotter{    
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container_Mini_Nav{   
+        position: relative; 
+        width: 512px;
+        height: 100%;
+
+        .mini_Nav{  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+
+            width: 475px;
+            height: 47px;
+            position: absolute; 
+            top: 100px;
+            left: 483px;
+
+            z-index: 2;
+
+            div{    
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                height: 100%;
+
+                svg{    
+                    width: 24px;
+                    height: 24px;
+                }
+
+                p{  
+                    font-family: "Poppins", sans-serif;
+                    font-size: 18px;
+                }
+            }
+
+            .home{  
+                width: 108px;
+            }
+            .aboutMe{   
+                width: 143px;
+            }
+            .contact{  
+                width: 128px;
+            }
+        }
+    }
+    .icons_Social_Privacy{  
+        position: relative; 
+        width: 928px;
+        height: 100%;
+
+        border-left: 2px #373c44 solid;
+
+        .icons_Social{  
+            position: absolute; 
+            bottom: 167px;
+            right: 588px;
+
+            width: 264px;
+            height: 48px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+
+            a{    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: #373c44;
+                cursor: pointer;
+
+                svg{    
+                    width: 24px;
+                    height: 24px;
+                    color: azure;
+                }
+
+                svg:hover{    
+                    color: #00adb5;
+                }
+            }
+        }
+
+        .privacy{   
+            position: absolute;
+            bottom: 48px;
+            right: 96px;
+            font-weight: normal;
+            width: 289px;
+            height: 27px;
+
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            color: #eeeeee;
+        }
+    }
+
+    @media (max-width: 1439px) {
+        .container_Mini_Nav{  
+            width: 40%;
+            .mini_Nav{  
+                right: -373px;
+                left: unset;
+            }
+        }
+        .icons_Social_Privacy{  
+            width: 60%;
+            .icons_Social{  
+                right: unset;
+                left: 6px;
+            }
+        }
+    }  
+
+    @media (max-width: 1135px) {
+        .container_Mini_Nav{  
+            .mini_Nav{  
+                right: -345px;
+            }
+        }
+
+        .icons_Social_Privacy{  
+            .icons_Social{  
+                left: -32px;
+            }
+        }
+    }
+
+    @media (max-width: 948px) {
+        .container_Mini_Nav{  
+            .mini_Nav{  
+                right: -317px;
+            }
+        }
+
+        .icons_Social_Privacy{  
+            .icons_Social{  
+                left: -63px;
+            }
+        }
+    }
+
+    @media (max-width: 643px) {
+        .container_Mini_Nav{  
+            width: 30%;
+            .mini_Nav{  
+                right: -365px;
+            }
+        }
+        .icons_Social_Privacy{  
+            width: 70%;
+
+            .icons_Social{  
+                left: -6px;
+            }
+
+            .privacy{   
+                right: 25px;
+            }
+
+        }
+    }
+
+    @media (max-width: 608px) {
+        .container_Mini_Nav{  
+            .mini_Nav{  
+                flex-wrap: wrap;
+                width: 360px;
+                right: -294px;
+                gap: 0px;
+            }
+        }
+
+        .icons_Social_Privacy{  
+
+            .icons_Social{  
+                left: -18px;
+                bottom: 135px;
+            }
+        }
+    }
+
+    @media (max-width: 519px) {
+        .container_Mini_Nav{  
+            .mini_Nav{  
+                right: -257px;
+            }
+        }
+
+        .icons_Social_Privacy{  
+
+            .icons_Social{  
+                left: -55px;
+            }
+        }
+    }
+
+}
