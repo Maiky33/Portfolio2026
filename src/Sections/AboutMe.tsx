@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { motion } from "framer-motion";
 
-import './styles/aboutMe.scss'
+import './Styles/aboutMe.scss'
 import AboutImage from "./Images/about/About.png"
 import ArrowVector from "./Images/about/arrow.png"
 import LigthVector from "./Images/about/lightbulb.png"

@@ -1,5 +1,5 @@
 
-import './styles/home.scss'
+import './Styles/home.scss'
 import HomeImage from "./Images/home/HomeImage.png"
 import ArrowVector from "./Images/home/ArrowVector.png"
 import { MdOutlineFileDownload } from "react-icons/md";

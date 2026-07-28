@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { motion } from "framer-motion";
 
-import './styles/worksAndSkills.scss'
+import './Styles/worksAndSkills.scss'
 import CardSkill from "../Components/CardSkill"
 import BackgrondPage from "./Images/WorksAndSkills/BackgrondPage.png"
 import {DataCardWorks} from "../Data/DataCardsWorks"

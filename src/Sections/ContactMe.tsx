@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 
 
-import './styles/ContactMe.scss'
+import './Styles/ContactMe.scss'
 import MainImage from "./Images/ContactMe/MainImage.png"
 import Keyboard from "./Images/ContactMe/keyboard.png"
 import Mail from "./Images/ContactMe/mail.png"
