@@ -2,6 +2,7 @@ import {useState} from 'react';
 import emailjs from '@emailjs/browser';
 import { BsSend } from "react-icons/bs";
 import { motion } from "framer-motion";
+import Modal from "../Components/Modal.tsx";
 
 
 
@@ -78,6 +79,8 @@ function ContactMe() {
 
       setDataSend(false);
     })
+
+
     .catch((err) => {
       console.log(err);
     });
@@ -100,6 +103,9 @@ function ContactMe() {
     // viewport={{ once: true }}
 
     className='ContacMe'> 
+
+      <Modal open={dataSend}  message={"Sending message"} classModal="modal_Send"/>
+
       <div className='container_Title_image'> 
         <h2>Got a project in <span>mind?</span></h2>
         <img className='mainImage' src={MainImage} alt="" />
