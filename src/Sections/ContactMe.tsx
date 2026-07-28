@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { BsSend } from "react-icons/bs";
 import { motion } from "framer-motion";
 import Modal from "../Components/Modal.tsx";
+import Swal from 'sweetalert2';
 
 
 
@@ -29,6 +30,8 @@ function ContactMe() {
   });
 
   const [dataSend, setDataSend] = useState(false);
+  const [openModal, setopenModal] = useState(false);
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -57,7 +60,29 @@ function ContactMe() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const requiredFields = {
+      user_name: "name",
+      user_email: "email",
+      message: "message",
+    };
+
+    const missingFields = Object.entries(requiredFields)
+    .filter(([field]) => !formData[field as keyof typeof formData].trim())
+    .map(([, label]) => label);
+
+    if (missingFields.length > 0) {
+      Swal.fire({
+        icon: "warning",
+        title: "Missing information",
+        text: `Please enter your ${missingFields.join(", ")}.`,
+        confirmButtonText: "OK",
+      });
+
+      return;
+    }
+
     setDataSend(true);
+    setopenModal(true);
 
     if (!validate()) return;
 
@@ -78,6 +103,10 @@ function ContactMe() {
       });
 
       setDataSend(false);
+
+      setTimeout(() => {
+        setopenModal(false);
+      }, 1000);
     })
 
 
@@ -104,7 +133,7 @@ function ContactMe() {
 
     className='ContacMe'> 
 
-      <Modal open={dataSend}  message={"Sending message"} classModal="modal_Send"/>
+      <Modal dataSend={dataSend} open={openModal}  message={"Sending message"} messageTwo={"Message sent successfully!"} classModal="modal_Send"/>
 
       <div className='container_Title_image'> 
         <h2>Got a project in <span>mind?</span></h2>
@@ -154,7 +183,7 @@ function ContactMe() {
           </div>
 
           <div className='container_Submmit'> 
-            <input className='buttonSendFromContactMe' type="submit" value="Send Message" />
+            <input disabled={dataSend} className='buttonSendFromContactMe' type="submit" value="Send Message" />
             <BsSend/>
           </div>
         </form>
