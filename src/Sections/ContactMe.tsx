@@ -12,25 +12,34 @@ import MainImage from "./Images/ContactMe/MainImage.png"
 import Keyboard from "./Images/ContactMe/keyboard.png"
 import Mail from "./Images/ContactMe/mail.png"
 
+interface FormData {
+  user_name: string;
+  user_email: string;
+  message: string;
+}
 
+interface FormErrors {
+  user_name: boolean;
+  user_email: boolean;
+  message: boolean;
+}
 
 function ContactMe() {
 
-
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     user_name: "",
     user_email: "",
-    message: "",
+    message: ""
   });
 
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<FormErrors>({
     user_name: false,
     user_email: false,
     message: false,
   });
 
-  const [dataSend, setDataSend] = useState(false);
-  const [openModal, setopenModal] = useState(false);
+  const [dataSend, setDataSend] = useState<boolean>(false);
+  const [openModal, setopenModal] = useState<boolean>(false);
 
 
   const handleChange = (
@@ -38,14 +47,15 @@ function ContactMe() {
   ) => {
     const { name, value } = e.target;
 
-    setFormData((prev) => ({
+    setFormData((prev: FormData) => ({
       ...prev,
       [name]: value,
     }));
   };
 
   const validate = () => {
-    const newErrors = {
+
+    const newErrors: FormErrors = {
       user_name: formData.user_name.trim() === "",
       user_email: formData.user_email.trim() === "",
       message: formData.message.trim() === "",
@@ -60,14 +70,19 @@ function ContactMe() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const requiredFields = {
+    const requiredFields: FormData = {
       user_name: "name",
       user_email: "email",
       message: "message",
     };
 
-    const missingFields = Object.entries(requiredFields)
-    .filter(([field]) => !formData[field as keyof typeof formData].trim())
+    const missingFields = 
+    // Object.entries() transforma el objeto en un array:
+    Object.entries(requiredFields)
+    //filtramos por la primera posicion del array que creamos
+    // entonces nos traera los field donde el valor del formData es vacio o solo espacios
+    .filter(([field]) => !formData[field as keyof typeof formData].trim())  
+    // obtenemos los labels de los campos que faltan, que es la segunda posicion del array
     .map(([, label]) => label);
 
     if (missingFields.length > 0) {
@@ -90,7 +105,7 @@ function ContactMe() {
     .send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      formData,
+      formData as unknown as Record<string, unknown>,
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(() => {

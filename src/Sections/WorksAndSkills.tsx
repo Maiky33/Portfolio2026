@@ -6,21 +6,26 @@ import './Styles/worksAndSkills.scss'
 import CardSkill from "../Components/CardSkill"
 import BackgrondPage from "./Images/WorksAndSkills/BackgrondPage.png"
 import {DataCardWorks} from "../Data/DataCardsWorks"
+import type { WorkCard } from '../Components/CardSkill.tsx'
 
 
+export interface Technology {
+    name: string;
+    image: string;
+}
 
 function WorksAndSkills() {
 
-    const [filterSelect, setfilterSelect] = useState("All")
+    const [filterSelect, setfilterSelect] = useState<string>("All")
 
     const SelectFilter = (item:string) =>{   
         setfilterSelect(item)
     }
 
-    const filteredCards = filterSelect === "All"? DataCardWorks: 
+    const filteredCards: WorkCard[] = filterSelect === "All"? DataCardWorks: 
     DataCardWorks.filter((item) => item.type === filterSelect);
 
-    const filters = ["All", "Frontend", "FullStack", "Landing"];
+    const filters:string[] = ["All", "Frontend", "FullStack", "Landing"];
 
 
     return (

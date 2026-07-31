@@ -12,11 +12,11 @@ import MusicVector from "./Images/about/music.png"
 
 function AboutMe() {
 
-    const [readMore, setReadMore] = useState(false);
+    const [readMore, setReadMore] = useState<boolean>(false);
 
-    const TextAboutMe = "Full Stack Developer with over 3 years of experience in developing, maintaining, and optimizing web applications. Skilled in React, JavaScript, TypeScript, Node.js, Express, and MongoDB, with experience building modern user interfaces, REST APIs, and scalable solutions. Recognized for solving technical issues, implementing new features, and collaborating effectively in agile teams. Currently pursuing a degree in Software Analysis and Development (ADSO)."
+    const TextAboutMe:string = "Full Stack Developer with over 3 years of experience in developing, maintaining, and optimizing web applications. Skilled in React, JavaScript, TypeScript, Node.js, Express, and MongoDB, with experience building modern user interfaces, REST APIs, and scalable solutions. Recognized for solving technical issues, implementing new features, and collaborating effectively in agile teams. Currently pursuing a degree in Software Analysis and Development (ADSO)."
   
-    const maxCharacters = 285;
+    const maxCharacters:number = 285;
 
     return (
         <motion.div id='AboutMe'

@@ -2,13 +2,20 @@
 import { useState } from 'react'
 import { motion } from "framer-motion";
 import './styles/cardSkill.scss'
+import type { Technology } from '../Sections/WorksAndSkills.tsx'
+export interface WorkCard {    
+    image: string;
+    WebSite: string;
+    Repository: string;
+    type: string;
+    technologies: Technology[];
+}
 
+function CardSkill({item, index}: {item: WorkCard, index: number}) {
 
-function CardSkill({item,index}:any) {
+    const CardItem: WorkCard = item
 
-    const CardItem = item
-
-    const [Move, setMove] = useState(false)
+    const [Move, setMove] = useState<boolean>(false)
 
     const MoveMouseImg = () => { 
         setMove(true)
