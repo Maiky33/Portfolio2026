@@ -74,7 +74,7 @@ export const DataCardWorks = [
         ]
     },{   
         image: ChatSocket,
-        WebSite: "https://github.com/Maiky33/ChatSocket",
+        WebSite: "https://chat-socket-wheat.vercel.app/",
         Repository:"https://github.com/Maiky33/ChatSocket",
         type:"FullStack",
         technologies: [
