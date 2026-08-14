@@ -74,7 +74,7 @@ export const DataCardWorks = [
         ]
     },{   
         image: ChatSocket,
-        WebSite: "https://taks-list-full-stack-orcin.vercel.app/",
+        WebSite: "https://chat-socket-wheat.vercel.app/",
         Repository:"https://github.com/Maiky33/ChatSocket",
         type:"FullStack",
         technologies: [
@@ -197,7 +197,7 @@ export const DataCardWorks = [
         ],
     },{   
         image: TaksList,
-        WebSite: "https://github.com/Maiky33/TaksListFullStack",
+        WebSite: "https://taks-list-full-stack-orcin.vercel.app/",
         Repository:"https://github.com/Maiky33/TaksListFullStack",
         type:"FullStack",
         technologies: [
