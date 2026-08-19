@@ -7,7 +7,6 @@ import { FiPhone } from "react-icons/fi";
 import { SlSocialFacebook } from "react-icons/sl";
 import { SiInstagram } from "react-icons/si";
 import { RiTwitterXFill } from "react-icons/ri";
-import { PiYoutubeLogo } from "react-icons/pi";
 import {motion} from "framer-motion"
 
 import {scrollToSection} from "../utils/scrollToSection"
@@ -49,14 +48,11 @@ function Fotter() {
             <a href='https://www.facebook.com/maicoljessid.barreragonzales?locale=es_LA' target='_blank'>   
                 <SlSocialFacebook />
             </a>
-            <a href='https://www.instagram.com/soymaiky_7/' target='_blank'>   
+            <a href='https://www.instagram.com/1maiky_3/' target='_blank'>   
                 <SiInstagram/>
             </a>
             <a href='https://x.com/MaicolB62723424' target='_blank'>   
                 <RiTwitterXFill/>
-            </a>
-            <a href='https://www.youtube.com/@SoyMaiky_7' target='_blank'>   
-                <PiYoutubeLogo/>
             </a>
         </div>
         <p className='privacy'>Terms of Service - Privacy Policy</p>
